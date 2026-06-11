@@ -1,0 +1,30 @@
+title: Titian's Notes
+tagline: Research notes and essays
+description: Personal writings on biomedicine, research, and reflection.
+url: https://titianyy.github.io
+baseurl: ""
+permalink: /:title/
+
+collections:
+  tags:
+    output: true
+    permalink: /tags/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: tags
+    values:
+      layout: tag
+
+markdown: kramdown
+exclude:
+  - README.md
+  - .claude/
+  - .superpowers/
+  - .DS_Store

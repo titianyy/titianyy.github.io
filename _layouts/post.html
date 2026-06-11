@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article>
+  <header class="post-header">
+    <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+    <h1>{{ page.title }}</h1>
+    {% for tag in page.tags %}
+      <a class="tag-pill" href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag }}</a>
+    {% endfor %}
+  </header>
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <nav class="post-nav">
+    <a href="{{ '/' | relative_url }}">← Home</a>
+    <span style="margin: 0 8px;">&middot;</span>
+    <a href="{{ '/tags/' | relative_url }}">All tags</a>
+  </nav>
+</article>

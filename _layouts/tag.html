@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% assign tag = page.tag-name %}
+{% assign posts = site.tags[tag] %}
+
+<article>
+  <header class="post-header">
+    <h1>{{ tag }}</h1>
+    <p class="post-excerpt">{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</p>
+  </header>
+
+  {% for post in posts %}
+  <div class="post-item">
+    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+  </div>
+  {% endfor %}
+
+  <nav class="post-nav">
+    <a href="{{ '/tags/' | relative_url }}">← All tags</a>
+    <span style="margin: 0 8px;">&middot;</span>
+    <a href="{{ '/' | relative_url }}">Home</a>
+  </nav>
+</article>
