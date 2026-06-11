@@ -6,7 +6,7 @@ baseurl: ""
 permalink: /:title/
 
 collections:
-  tags:
+  tagpages:
     output: true
     permalink: /tags/:name/
 
@@ -18,7 +18,7 @@ defaults:
       layout: post
   - scope:
       path: ""
-      type: tags
+      type: tagpages
     values:
       layout: tag
 
