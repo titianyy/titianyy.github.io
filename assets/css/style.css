@@ -191,8 +191,9 @@ main {
 
 /* Footer */
 .site-footer {
-  margin-top: 64px;
-  padding-top: 16px;
+  max-width: var(--max-width);
+  margin: 64px auto 0;
+  padding: 16px 20px 32px;
   border-top: 1px solid var(--divider);
   font-size: 13px;
   color: var(--meta);
